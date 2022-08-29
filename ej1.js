@@ -33,4 +33,23 @@ año: 4,
 curso: "A",
 nota: 8,
 },
+
+{
+nombe: "Jose",
+apellido: "Fer",
+dni: 47070879,
+año: 3,
+curso: "A",
+nota: 3,
+},
+
+{
+nombe: "Fernado",
+apellido: "Far",
+dni: 47090786,
+año: 3,
+curso: "A",
+nota: 9,
+},
+
 ]
