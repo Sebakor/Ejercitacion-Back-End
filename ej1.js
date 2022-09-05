@@ -1,6 +1,7 @@
+// ej 1
 let alumnos = [
     {
-    nombe: "Matias",
+    nombre: "Matias",
     apellido: "Lopez",
     dni: 45987467,
     año: 5,
@@ -9,7 +10,7 @@ let alumnos = [
     },
     
     {
-    nombe: "Lautaro",
+    nombre: "Lautaro",
     apellido: "Perez",
     dni: 45689231,
     año: 5,
@@ -26,7 +27,7 @@ let alumnos = [
     nota: 4,
     },
     {
-    nombe: "Matias",
+    nombre: "Matias",
     apellido: "Gar",
     dni: 46802588,
     año: 4,
@@ -35,7 +36,7 @@ let alumnos = [
     },
     
     {
-    nombe: "Jose",
+    nombre: "Jose",
     apellido: "Fer",
     dni: 47070879,
     año: 3,
@@ -44,7 +45,7 @@ let alumnos = [
     },
     
     {
-    nombe: "Fernado",
+    nombre: "Fernado",
     apellido: "Far",
     dni: 47090786,
     año: 3,
@@ -52,15 +53,59 @@ let alumnos = [
     nota: 9,
     },
     
-    ]
+    {
+    nombre: "Tomas",
+    apellido: "Eari",
+    dni: 47090786,
+    año: 4,
+    curso: "B",
+    nota: 9,
+    },
 
-const capitalizar = (string) => {
+    {
+    nombre: "Nicolas",
+    apellido: "Eara",
+    dni: 47090786,
+    año: 4,
+    curso: "B",
+    nota: 9,
+    }    
+]
+
+    // ej 2
+
+    const capitalizar = (string) => {
     newLetter = string[0].toUpperCase()
     newString = newLetter + string.substring(1, string.length)
     return newString
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
     console.log(capitalizar('hola'))
 
 })
+
+
+
+    // ej 3
+
+    const mostrarAlumno = (alumno) => {
+        console.log("DNI:"+ alumno.dni);
+        console.log("Nombre: " +alumno.nombre+ " "+alumno.apellido);
+        console.log("Curso y año :" +alumno.año +alumno.curso);
+        console.log("Nota: "+alumno.nota);
+    }
+    let num = 0;
+    mostrarAlumno(alumnos[0])
+    
+    
+    // ej 4
+
+    let alumnosCapitalizados = alumnos.map(alumno => {
+        return {
+            nombre: capitalizar(alumno.nombre),
+            apellido: capitalizar(alumno.apellido),
+        }
+    })
+        console.log(alumnosCapitalizados);
+    
