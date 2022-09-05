@@ -1,4 +1,4 @@
-// ej 1
+//ej 1
 let alumnos = [
     {
     nombre: "Matias",
@@ -68,11 +68,13 @@ let alumnos = [
     dni: 47090786,
     año: 4,
     curso: "B",
-    nota: 9,
+    nota: 2,
     }    
+
+    
 ]
 
-    // ej 2
+    //ej 2
 
     const capitalizar = (string) => {
     newLetter = string[0].toUpperCase()
@@ -83,23 +85,26 @@ let alumnos = [
     document.addEventListener("DOMContentLoaded", () => {
     console.log(capitalizar('hola'))
 
+    console.log("")
+    console.log("")
+
 })
 
-
-
-    // ej 3
+    //ej 3
 
     const mostrarAlumno = (alumno) => {
         console.log("DNI:"+ alumno.dni);
         console.log("Nombre: " +alumno.nombre+ " "+alumno.apellido);
         console.log("Curso y año :" +alumno.año +alumno.curso);
-        console.log("Nota: "+alumno.nota);
+        console.log("Nota: "+ alumno.nota);
     }
     let num = 0;
     mostrarAlumno(alumnos[0])
     
-    
-    // ej 4
+    console.log("")
+    console.log("")
+        
+    //ej 4
 
     let alumnosCapitalizados = alumnos.map(alumno => {
         if(alumno.nombre && alumno.apellido)
@@ -112,4 +117,40 @@ let alumnos = [
         
     })
         console.log(alumnosCapitalizados);
+        console.log("")
+        console.log("")
+
+        //ej 5
+
+        let mostrarAlumnos = alumnos.map(alumno => { 
+            return mostrarAlumno(alumno);
+        })
+        console.log("")
+        console.log("")
+
+        //ej 6
+
+        alumnos .filter((alumno) => alumno.nota >= 6).map((alumno) => 
+        mostrarAlumno(alumno));
+
+        console.log("")
+        console.log("")
+
+        //ej 7
+        
+        //Ejercicio 7
+        //Ejercicio 7
+alumnos .filter((alumno) => alumno.curso.charAt(0) === "4").map((alumno) => mostrarAlumno(alumno));
+console.log("")
+alumnos .filter((alumno) => alumno.curso.charAt(2) === "B").map((alumno) => mostrarAlumno(alumno));
+
+
+
+        
+
+
+
+
+
+
     
