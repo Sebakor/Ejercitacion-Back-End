@@ -17,15 +17,15 @@ let alumnos = [
     curso: "A",
     nota: 5,
     },
-    
     {
-    nombe: "Jose",
+    nombre: "Jose",
     apellido: "God",
     dni: 46398777,
     año: 4,
     curso: "A",
     nota: 4,
-    },
+
+    },    
     {
     nombre: "Matias",
     apellido: "Gar",
@@ -102,10 +102,14 @@ let alumnos = [
     // ej 4
 
     let alumnosCapitalizados = alumnos.map(alumno => {
-        return {
-            nombre: capitalizar(alumno.nombre),
-            apellido: capitalizar(alumno.apellido),
+        if(alumno.nombre && alumno.apellido)
+        {
+            return {
+                nombre: capitalizar(alumno.nombre),
+                apellido: capitalizar(alumno.apellido),
+            }
         }
+        
     })
         console.log(alumnosCapitalizados);
     
