@@ -136,13 +136,20 @@ let alumnos = [
         console.log("")
         console.log("")
 
+                
         //ej 7
+        alumnos .filter((alumno) => alumno.año === "4").map((alumno) => mostrarAlumno(alumno));
+        console.log("")
+       
+
+        //ej 8
+
+        alumnos .filter((alumno) => alumno.curso === "B").map((alumno) => mostrarAlumno(alumnno))
+        console.log("")
+
         
-        //Ejercicio 7
-        //Ejercicio 7
-alumnos .filter((alumno) => alumno.curso.charAt(0) === "4").map((alumno) => mostrarAlumno(alumno));
-console.log("")
-alumnos .filter((alumno) => alumno.curso.charAt(2) === "B").map((alumno) => mostrarAlumno(alumno));
+        
+
 
 
 
